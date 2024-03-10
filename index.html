@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông Tin Người Dùng</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+      label {
+      }
+      .input-field {
+        border: none;
+        background-color: #ececec;
+      }
+      .container {
+        padding: 20px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+      .header-text {
+        font-size: larger;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+      }
+      .sign-btn {
+        padding: 20px 16px;
+        border: none;
+        background-color: #146ebe;
+        color: white;
+        cursor: pointer;
+        font-size: medium;
+        font-weight: 600;
+        border-radius: 15px;
+      }
+      .sign-btn:hover {
+        background-color: #146ebe;
+      }
+      .swap-form {
+        display: flex;
+        padding: 8px;
+        background-color: white;
+      }
+      .active {
+        background-color: #146ebe;
+        color: white;
+      }
+      .detail {
+        padding: 8px 24px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .link {
+        padding: 8px 24px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .form-container {
+        display: flex;
+      }
+      .form {
+        width: 30%;
+        background-color: white;
+      }
+      .form-group {
+        margin-bottom: 16px;
+        border-radius: 10px;
+      }
+      .form-group label {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: gray;
+        padding: 10px;
+        margin: 10px 0;
+      }
+      .form-group input {
+        width: 100%;
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        margin: 10px;
+      }
+      .card-container {
+        width: 30%;
+      }
+      .card {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-top: 20px;
+        margin-left: 50px;
+        width: 70%;
+        background-color: white;
+      }
+      .input-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background-color: #ececec">
+      <div class="container">
+        <div class="header">
+          <div class="header-text">Bài tập phỏng vấn</div>
+          <button class="sign-btn">Copy chữ ký</button>
+        </div>
+        <div class="swap-form">
+          <div class="detail active" onclick="showForm(1)">
+            <i class="far fa-user"></i>
+            <div class="">Chi tiết</div>
+          </div>
+          <div class="link" onclick="showForm(2)">
+            <i class="fas fa-share-alt"></i>
+            <div class="">Links</div>
+          </div>
+        </div>
+        <div class="form-container">
+          <div class="form" id="form1">
+            <div>
+              <div style="font-size: 16px; font-weight: bold; color: #146ebe">
+                Thông tin cá nhân
+              </div>
+              <div class="form-group">
+                <label for="full-name">Họ và tên</label>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <input
+                    type="text"
+                    id="full-name"
+                    class="input-field"
+                    placeholder="Nhập họ và tên"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="nickname">Biệt Danh</label>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <input
+                    type="text"
+                    id="nickname"
+                    class="input-field"
+                    placeholder="Nhập biệt danh"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="title">Chức Danh</label>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <input
+                    type="text"
+                    id="title"
+                    class="input-field"
+                    placeholder="Nhập chức danh"
+                  />
+                </div>
+              </div>
+            </div>
+            <div style="font-size: 16px; font-weight: bold; color: #146ebe">
+              Chi tiết
+            </div>
+            <div
+              class="form-group"
+              style="background-color: #ececec; margin: 0 10px"
+            >
+              <label for="phone">Số Điện Thoại</label>
+              <div class="input-container">
+                <input
+                  type="tel"
+                  id="phone"
+                  class="input-field"
+                  placeholder="Nhập số điện thoại"
+                  style="background-color: white"
+                />
+              </div>
+            </div>
+            <div
+              class="form-group"
+              style="background-color: #ececec; margin: 0 10px"
+            >
+              <label for="email">Email</label>
+              <div class="input-container">
+                <input
+                  type="email"
+                  id="email"
+                  class="input-field"
+                  placeholder="Nhập email"
+                  style="background-color: white"
+                />
+              </div>
+            </div>
+            <div
+              class="form-group"
+              style="background-color: #ececec; margin: 0 10px"
+            >
+              <label for="address">Địa Chỉ</label>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="address"
+                  class="input-field"
+                  placeholder="Nhập địa chỉ"
+                  style="background-color: white"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form" id="form2" style="display: none">
+            <div class="form-group">
+              <label for="phone">Facebook</label>
+              <div class="input-container">
+                <input
+                  type="tel"
+                  id="phone"
+                  class="input-field"
+                  placeholder="Nhập số điện thoại"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Instagram</label>
+              <div class="input-container">
+                <input
+                  type="email"
+                  id="email"
+                  class="input-field"
+                  placeholder="Nhập email"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address">Twitter</label>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="address"
+                  class="input-field"
+                  placeholder="Nhập địa chỉ"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card" id="user-card">
+              <h3>Thông Tin Người Dùng</h3>
+              <p id="full-name-display"></p>
+              <p id="nickname-display"></p>
+              <p id="title-display"></p>
+              <p id="phone-display"></p>
+              <p id="email-display"></p>
+              <p id="address-display"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showForm(formId) {
+        if (formId === 1) {
+          document.getElementById("form1").style.display = "block";
+          document.getElementById("form2").style.display = "none";
+          document.querySelector(".detail").classList.add("active");
+          document.querySelector(".link").classList.remove("active");
+        } else {
+          document.getElementById("form1").style.display = "none";
+          document.getElementById("form2").style.display = "block";
+          document.querySelector(".link").classList.add("active");
+          document.querySelector(".detail").classList.remove("active");
+        }
+      }
+
+      document.querySelectorAll(".input-field").forEach((item) => {
+        item.addEventListener("input", updateCard);
+      });
+
+      function updateCard() {
+        document.getElementById("full-name-display").innerText =
+          "Họ và Tên: " + document.getElementById("full-name").value;
+        document.getElementById("nickname-display").innerText =
+          "Biệt Danh: " + document.getElementById("nickname").value;
+        document.getElementById("title-display").innerText =
+          "Chức Danh: " + document.getElementById("title").value;
+        document.getElementById("phone-display").innerText =
+          "Số Điện Thoại: " + document.getElementById("phone").value;
+        document.getElementById("email-display").innerText =
+          "Email: " + document.getElementById("email").value;
+        document.getElementById("address-display").innerText =
+          "Địa Chỉ: " + document.getElementById("address").value;
+      }
+    </script>
+  </body>
+</html>
