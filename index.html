@@ -59,14 +59,16 @@
         color: white;
       }
       .detail {
-        padding: 8px 24px;
+        padding: 8px 30px;
         text-align: center;
         cursor: pointer;
+        border-radius: 10px;
       }
       .link {
-        padding: 8px 24px;
+        padding: 8px 30px;
         text-align: center;
         cursor: pointer;
+        border-radius: 10px;
       }
       .form-container {
         display: flex;
@@ -74,6 +76,7 @@
       .form {
         width: 40%;
         background-color: white;
+        border-radius: 10px;
       }
       .form-group {
         border-radius: 10px;
@@ -93,19 +96,19 @@
         padding: 20px;
         font-size: 16px;
         border-radius: 5px;
-        margin: 10px;
+        margin: 0 10px;
+        margin-bottom: 10px;
       }
       .card-container {
         width: 60%;
         display: flex;
         justify-content: center;
-        align-items: center;
       }
       .card {
         border-radius: 20px;
         box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
         width: 80%;
-        height: 500px;
+        height: 600px;
         background-color: white;
       }
       .input-container {
@@ -168,12 +171,22 @@
         </div>
         <div class="swap-form">
           <div class="detail active" onclick="showForm(1)">
-            <i class="far fa-user"></i>
-            <div class="">Chi tiết</div>
+            <i class="far fa-user" style="font-size: 30px"></i>
+            <div
+              class=""
+              style="font-size: 16px; margin-top: 5px; font-weight: bold"
+            >
+              Chi tiết
+            </div>
           </div>
           <div class="link" onclick="showForm(2)">
-            <i class="fas fa-share-alt"></i>
-            <div class="">Links</div>
+            <i class="fas fa-share-alt" style="font-size: 30px"></i>
+            <div
+              class=""
+              style="font-size: 16px; margin-top: 5px; font-weight: bold"
+            >
+              Links
+            </div>
           </div>
         </div>
         <div class="form-container">
@@ -256,7 +269,7 @@
               style="background-color: #f5f5f5; margin: 10px 10px"
             >
               <div class="flex-label">
-                <i class="fas fa-phone"></i>
+                <i class="fas fa-phone" style="color: #146ebe"></i>
                 <label for="phone">Số Điện Thoại</label>
               </div>
               <div class="input-container">
@@ -274,7 +287,7 @@
               style="background-color: #f5f5f5; margin: 10px 10px"
             >
               <div class="flex-label">
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-envelope" style="color: #146ebe"></i>
                 <label for="email">Email</label>
               </div>
               <div class="input-container">
@@ -292,7 +305,7 @@
               style="background-color: #f5f5f5; margin: 10px 10px"
             >
               <div class="flex-label">
-                <i class="fas fa-map-marker-alt"></i>
+                <i class="fas fa-map-marker-alt" style="color: #146ebe"></i>
                 <label for="address">Địa Chỉ</label>
               </div>
               <div class="input-container">
@@ -458,13 +471,213 @@
                   "
                 ></div>
               </div>
-              <h3>Thông Tin Người Dùng</h3>
-              <p id="full-name-display">Tên</p>
-              <p id="nickname-display">Nick</p>
-              <p id="title-display"></p>
-              <p id="phone-display"></p>
-              <p id="email-display"></p>
-              <p id="address-display"></p>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding: 8px 16px;
+                  height: 70%;
+                "
+              >
+                <div style="width: 50%">
+                  <div>
+                    <p
+                      id="full-name-display"
+                      style="font-size: 20px; font-weight: 700"
+                    >
+                      Trịnh Anh Quốc
+                    </p>
+                    <p id="nickname-display" style="color: gray">Developer</p>
+                    <p id="title-display">Developer</p>
+                  </div>
+                  <div>
+                    <div style="display: flex; align-items: center">
+                      <div
+                        style="
+                          margin-right: 10px;
+                          color: #146ebe;
+                          font-size: 15px;
+                          font-weight: 560;
+                        "
+                      >
+                        <i class="fas fa-phone" style="margin-right: 6px"></i>
+                        Điện thoại:
+                      </div>
+                      <p id="phone-display">0123456789</p>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: 10px;
+                      "
+                    >
+                      <div
+                        style="
+                          margin-right: 10px;
+                          color: #146ebe;
+                          font-size: 15px;
+                          font-weight: 560;
+                        "
+                      >
+                        <i
+                          class="fas fa-envelope"
+                          style="margin-right: 6px"
+                        ></i>
+                        Email:
+                      </div>
+                      <p id="email-display">quoctrinhanh0710@gmail.com</p>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: 10px;
+                      "
+                    >
+                      <div
+                        style="
+                          margin-right: 10px;
+                          color: #146ebe;
+                          font-size: 15px;
+                          font-weight: 560;
+                        "
+                      >
+                        <i
+                          class="fas fa-map-marker-alt"
+                          style="margin-right: 6px"
+                        ></i>
+                        Địa chỉ:
+                      </div>
+                      <p id="address-display">Đà Nẵng</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50%;
+                  "
+                >
+                  <div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 10px;
+                      "
+                    >
+                      <img
+                        src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
+                        alt=""
+                        style="width: 180px; height: 180px; border-radius: 50%"
+                      />
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                      "
+                    >
+                      <i
+                        class="fab fa-facebook-f"
+                        style="
+                          width: 20px;
+                          height: 20px;
+                          padding: 7px;
+                          background-color: #146ebe;
+                          border-radius: 50%;
+                          color: white;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fab fa-linkedin"
+                        style="
+                          width: 20px;
+                          height: 20px;
+                          padding: 7px;
+                          background-color: #146ebe;
+                          border-radius: 50%;
+                          color: white;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fab fa-youtube"
+                        style="
+                          width: 20px;
+                          height: 20px;
+                          padding: 7px;
+                          background-color: #146ebe;
+                          border-radius: 50%;
+                          color: white;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fab fa-twitter"
+                        style="
+                          width: 20px;
+                          height: 20px;
+                          padding: 7px;
+                          background-color: #146ebe;
+                          border-radius: 50%;
+                          color: white;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fab fa-instagram-square input"
+                        style="
+                          width: 20px;
+                          height: 20px;
+                          padding: 7px;
+                          background-color: #146ebe;
+                          border-radius: 50%;
+                          color: white;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; justify-content: center">
+                <div
+                  style="
+                    width: 90%;
+                    padding: 5px;
+                    background-color: #f5f5f5;
+                    border-radius: 25px;
+                  "
+                ></div>
+              </div>
             </div>
           </div>
         </div>
@@ -485,35 +698,30 @@
           document.querySelector(".detail").classList.remove("active");
         }
       }
-
       document.querySelectorAll(".input-field").forEach((item) => {
         item.addEventListener("input", updateCard);
       });
 
       function updateCard() {
         document.getElementById("full-name-display").innerText =
-          "Họ và Tên: " + document.getElementById("full-name").value;
+          document.getElementById("full-name").value;
         document.getElementById("nickname-display").innerText =
-          "Biệt Danh: " + document.getElementById("nickname").value;
+          document.getElementById("nickname").value;
         document.getElementById("title-display").innerText =
-          "Chức Danh: " + document.getElementById("title").value;
+          document.getElementById("title").value;
         document.getElementById("phone-display").innerText =
-          "Số Điện Thoại: " + document.getElementById("phone").value;
+          document.getElementById("phone").value;
         document.getElementById("email-display").innerText =
-          "Email: " + document.getElementById("email").value;
+          document.getElementById("email").value;
         document.getElementById("address-display").innerText =
-          "Địa Chỉ: " + document.getElementById("address").value;
+          document.getElementById("address").value;
       }
       function toggleInput(inputId) {
         var input = document.getElementById(inputId);
-        var icon = document.getElementById(inputId.replace("-input", "-icon"));
-
         if (input.style.display === "none") {
           input.style.display = "inline-block";
-          icon.classList.add("selected");
         } else {
           input.style.display = "none";
-          icon.classList.remove("selected");
         }
       }
     </script>
