@@ -8,159 +8,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        padding: 0;
-        margin: 0;
-      }
-      label {
-      }
-      .input-field {
-        border: none;
-        background-color: #f5f5f5;
-      }
-      .container {
-        padding: 20px;
-      }
-      .header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 12px;
-      }
-      .header-text {
-        font-size: larger;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-      }
-      .sign-btn {
-        padding: 20px 16px;
-        border: none;
-        background-color: #146ebe;
-        color: white;
-        cursor: pointer;
-        font-size: medium;
-        font-weight: 600;
-        border-radius: 15px;
-      }
-      .sign-btn:hover {
-        background-color: #146ebe;
-      }
-      .swap-form {
-        display: flex;
-        padding: 8px;
-        background-color: white;
-        margin-bottom: 12px;
-      }
-      .active {
-        background-color: #146ebe;
-        color: white;
-      }
-      .detail {
-        padding: 8px 30px;
-        text-align: center;
-        cursor: pointer;
-        border-radius: 10px;
-      }
-      .link {
-        padding: 8px 30px;
-        text-align: center;
-        cursor: pointer;
-        border-radius: 10px;
-      }
-      .form-container {
-        display: flex;
-      }
-      .form {
-        width: 40%;
-        background-color: white;
-        border-radius: 10px;
-      }
-      .form-group {
-        border-radius: 10px;
-      }
-      .form-group label {
-        display: flex;
-        align-items: center;
-        font-size: 15px;
-        font-weight: 600;
-        color: gray;
-        margin: 10px 0;
-        margin-left: 5px;
-        padding: 10px;
-      }
-      .form-group input {
-        width: 100%;
-        padding: 20px;
-        font-size: 16px;
-        border-radius: 5px;
-        margin: 0 10px;
-        margin-bottom: 10px;
-      }
-      .card-container {
-        width: 60%;
-        display: flex;
-        justify-content: center;
-      }
-      .card {
-        border-radius: 20px;
-        box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
-        width: 80%;
-        height: 600px;
-        background-color: white;
-      }
-      .input-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .list-icon {
-        padding: 6px;
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-      }
-      .icon {
-        cursor: pointer;
-        border: black 1px solid;
-        border-radius: 10px;
-        padding: 8px;
-        width: 15%;
-        text-align: center;
-      }
-      .icon-social {
-        font-size: 50px;
-      }
-      .selected {
-        color: blue;
-      }
-      .flex-label {
-        display: flex;
-        align-items: center;
-        padding: 0 10px;
-      }
-      .circle {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 8px;
-      }
-
-      .red {
-        background-color: red;
-      }
-
-      .yellow {
-        background-color: yellow;
-      }
-
-      .blue {
-        background-color: green;
-      }
-    </style>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div style="background-color: #f5f5f5">
@@ -274,7 +123,7 @@
               </div>
               <div class="input-container">
                 <input
-                  type="tel"
+                  type="number"
                   id="phone"
                   class="input-field"
                   placeholder="Nhập số điện thoại"
@@ -321,94 +170,130 @@
           </div>
           <div class="form" id="form2" style="display: none">
             <div style="display: grid">
-              <div class="form-group" id="facebook-input" style="display: none">
+              <div
+                class="form-group facebook-input"
+                style="
+                  background-color: #f5f5f5;
+                  margin: 10px 10px;
+                  display: none;
+                "
+              >
                 <div class="flex-label">
-                  <i class="fab fa-facebook-f"></i>
+                  <i class="fab fa-facebook-f" style="color: #146ebe"></i>
                   <label for="Facebook">Facebook</label>
                 </div>
                 <div class="input-container">
                   <input
                     type="text"
-                    class="input-field input"
+                    class="input-field input facebook-input-value"
                     placeholder="https://www.facebook.com/user"
+                    style="background-color: white"
                   />
                 </div>
               </div>
               <div
-                class="form-group"
-                id="instagram-input"
-                style="display: none"
+                class="form-group instagram-input"
+                style="
+                  display: none;
+                  background-color: #f5f5f5;
+                  margin: 10px 10px;
+                "
               >
                 <div class="flex-label">
-                  <i class="fab fa-instagram-square"></i>
+                  <i class="fab fa-instagram-square" style="color: #146ebe"></i>
                   <label for="Instagram">Instagram</label>
                 </div>
                 <div class="input-container">
                   <input
                     type="text"
-                    class="input-field input"
+                    class="input-field input instagram-input-value"
+                    style="background-color: white"
                     placeholder="https://www.instagram.com/user"
                   />
                 </div>
               </div>
-              <div class="form-group" id="twitter-input" style="display: none">
+              <div
+                class="form-group twitter-input"
+                style="
+                  display: none;
+                  background-color: #f5f5f5;
+                  margin: 10px 10px;
+                "
+              >
                 <div class="flex-label">
-                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-twitter" style="color: #146ebe"></i>
                   <label for="Twitter">Twitter</label>
                 </div>
                 <div class="input-container">
                   <input
                     type="text"
-                    class="input-field input"
+                    class="input-field input twitter-input-value"
+                    style="background-color: white"
                     placeholder="https://www.twitter.com/user"
                   />
                 </div>
               </div>
-              <div class="form-group" id="youtube-input" style="display: none">
+              <div
+                class="form-group youtube-input"
+                style="
+                  display: none;
+                  background-color: #f5f5f5;
+                  margin: 10px 10px;
+                "
+              >
                 <div class="flex-label">
-                  <i class="fab fa-youtube"></i>
+                  <i class="fab fa-youtube" style="color: #146ebe"></i>
                   <label for="Youtube">Youtube</label>
                 </div>
                 <div class="input-container">
                   <input
                     type="text"
-                    class="input-field input"
+                    class="input-field input youtube-input-value"
                     placeholder="https://www.youtube.com/user"
+                    style="background-color: white"
                   />
                 </div>
               </div>
-              <div class="form-group" id="linked-input" style="display: none">
+              <div
+                class="form-group linked-input"
+                style="
+                  display: none;
+                  background-color: #f5f5f5;
+                  margin: 10px 10px;
+                "
+              >
                 <div class="flex-label">
-                  <i class="fab fa-linkedin"></i>
+                  <i class="fab fa-linkedin" style="color: #146ebe"></i>
                   <label for="Linked">Linked</label>
                 </div>
                 <div class="input-container">
                   <input
                     type="text"
-                    class="input-field input"
+                    class="input-field input linked-input-value"
                     placeholder="https://www.linked.com/user"
+                    style="background-color: white"
                   />
                 </div>
               </div>
             </div>
             <div class="list-icon">
-              <div class="icon" onclick="toggleInput('facebook-input')">
+              <div class="icon" onclick="toggleInput('facebook-input', this)">
                 <i class="fab fa-facebook-f icon-social"></i>
                 <div class="social-name">Facebook</div>
               </div>
-              <div class="icon" onclick="toggleInput('instagram-input')">
+              <div class="icon" onclick="toggleInput('instagram-input', this)">
                 <i class="fab fa-instagram-square icon-social"></i>
                 <div class="social-name">Instagram</div>
               </div>
-              <div class="icon" onclick="toggleInput('twitter-input')">
+              <div class="icon" onclick="toggleInput('twitter-input', this)">
                 <i class="fab fa-twitter icon-social"></i>
                 <div class="social-name">Twitter</div>
               </div>
-              <div class="icon" onclick="toggleInput('youtube-input')">
+              <div class="icon" onclick="toggleInput('youtube-input', this)">
                 <i class="fab fa-youtube icon-social"></i>
                 <div class="social-name">Youtube</div>
               </div>
-              <div class="icon" onclick="toggleInput('linked-input')">
+              <div class="icon" onclick="toggleInput('linked-input', this)">
                 <i class="fab fa-linkedin icon-social"></i>
                 <div class="social-name">Linkedin</div>
               </div>
@@ -442,6 +327,7 @@
                       margin-left: 15px;
                       background-color: #e4e2e2;
                       border-radius: 25px;
+                      font-weight: bold;
                     "
                   >
                     Email người nhận
@@ -455,6 +341,7 @@
                       margin-left: 15px;
                       background-color: #e4e2e2;
                       border-radius: 25px;
+                      font-weight: bold;
                     "
                   >
                     Kiểm tra chữ ký email mới của tôi
@@ -477,19 +364,28 @@
                   align-items: center;
                   justify-content: space-between;
                   padding: 8px 16px;
-                  height: 70%;
+                  height: 60%;
+                  margin-left: 27px;
+                  width: 90%;
                 "
               >
                 <div style="width: 50%">
-                  <div>
-                    <p
+                  <div style="margin-bottom: 20px">
+                    <div
                       id="full-name-display"
-                      style="font-size: 20px; font-weight: 700"
+                      style="font-size: 28px; font-weight: 700"
                     >
                       Trịnh Anh Quốc
-                    </p>
-                    <p id="nickname-display" style="color: gray">Developer</p>
-                    <p id="title-display">Developer</p>
+                    </div>
+                    <div
+                      id="nickname-display"
+                      style="color: gray; margin-top: 10px"
+                    >
+                      Developer
+                    </div>
+                    <div id="title-display" style="margin-top: 10px">
+                      Developer
+                    </div>
                   </div>
                   <div>
                     <div style="display: flex; align-items: center">
@@ -529,6 +425,7 @@
                       </div>
                       <p id="email-display">quoctrinhanh0710@gmail.com</p>
                     </div>
+
                     <div
                       style="
                         display: flex;
@@ -546,11 +443,31 @@
                       >
                         <i
                           class="fas fa-map-marker-alt"
-                          style="margin-right: 6px"
+                          style="margin-right: 10px"
                         ></i>
                         Địa chỉ:
                       </div>
                       <p id="address-display">Đà Nẵng</p>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: 10px;
+                      "
+                    >
+                      <div
+                        style="
+                          margin-right: 10px;
+                          color: #146ebe;
+                          font-size: 15px;
+                          font-weight: 560;
+                        "
+                      >
+                        <i class="fas fa-link" style="margin-right: 6px"></i>
+                        Website:
+                      </div>
+                      <p id="email-display">quoctrinhanh0710@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -558,7 +475,7 @@
                   style="
                     display: flex;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: flex-end;
                     width: 50%;
                   "
                 >
@@ -574,96 +491,67 @@
                       <img
                         src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
                         alt=""
-                        style="width: 180px; height: 180px; border-radius: 50%"
+                        style="width: 200px; height: 200px; border-radius: 50%"
                       />
                     </div>
                     <div
                       style="
                         display: flex;
-                        justify-content: space-between;
+                        justify-content: space-evenly;
                         align-items: center;
                       "
                     >
-                      <i
-                        class="fab fa-facebook-f"
+                      <a
+                        href=""
+                        class="facebook-input facebook-link"
+                        style="display: none"
+                      >
+                        <i class="fab fa-facebook-f icon-card"></i>
+                      </a>
+                      <a
+                        href=""
+                        class="twitter-input twitter-link"
+                        style="display: none"
+                      >
+                        <i class="fab fa-twitter icon-card"></i>
+                      </a>
+                      <a
+                        href=""
+                        class="instagram-input instagram-link"
+                        style="display: none"
+                      >
+                        <i class="fab fa-instagram-square icon-card"></i>
+                      </a>
+                      <a
+                        href=""
+                        class="linked-input linked-link"
+                        style="display: none"
+                      >
+                        <i class="fab fa-linkedin icon-card"></i>
+                      </a>
+                      <a
+                        href=""
+                        class="youtube-input youtube-link"
+                        style="display: none"
+                      >
+                        <i class="fab fa-youtube icon-card"></i>
+                      </a>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 10px;
+                      "
+                    >
+                      <div
                         style="
-                          width: 20px;
-                          height: 20px;
-                          padding: 7px;
-                          background-color: #146ebe;
-                          border-radius: 50%;
-                          color: white;
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          margin-left: 2px;
-                          margin-right: 2px;
+                          width: 90%;
+                          padding: 5px;
+                          background-color: #f5f5f5;
+                          border-radius: 25px;
                         "
-                      ></i>
-                      <i
-                        class="fab fa-linkedin"
-                        style="
-                          width: 20px;
-                          height: 20px;
-                          padding: 7px;
-                          background-color: #146ebe;
-                          border-radius: 50%;
-                          color: white;
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          margin-left: 2px;
-                          margin-right: 2px;
-                        "
-                      ></i>
-                      <i
-                        class="fab fa-youtube"
-                        style="
-                          width: 20px;
-                          height: 20px;
-                          padding: 7px;
-                          background-color: #146ebe;
-                          border-radius: 50%;
-                          color: white;
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          margin-left: 2px;
-                          margin-right: 2px;
-                        "
-                      ></i>
-                      <i
-                        class="fab fa-twitter"
-                        style="
-                          width: 20px;
-                          height: 20px;
-                          padding: 7px;
-                          background-color: #146ebe;
-                          border-radius: 50%;
-                          color: white;
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          margin-left: 2px;
-                          margin-right: 2px;
-                        "
-                      ></i>
-                      <i
-                        class="fab fa-instagram-square input"
-                        style="
-                          width: 20px;
-                          height: 20px;
-                          padding: 7px;
-                          background-color: #146ebe;
-                          border-radius: 50%;
-                          color: white;
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          margin-left: 2px;
-                          margin-right: 2px;
-                        "
-                      ></i>
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -683,47 +571,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      function showForm(formId) {
-        if (formId === 1) {
-          document.getElementById("form1").style.display = "grid";
-          document.getElementById("form2").style.display = "none";
-          document.querySelector(".detail").classList.add("active");
-          document.querySelector(".link").classList.remove("active");
-        } else {
-          document.getElementById("form1").style.display = "none";
-          document.getElementById("form2").style.display = "grid";
-          document.querySelector(".link").classList.add("active");
-          document.querySelector(".detail").classList.remove("active");
-        }
-      }
-      document.querySelectorAll(".input-field").forEach((item) => {
-        item.addEventListener("input", updateCard);
-      });
-
-      function updateCard() {
-        document.getElementById("full-name-display").innerText =
-          document.getElementById("full-name").value;
-        document.getElementById("nickname-display").innerText =
-          document.getElementById("nickname").value;
-        document.getElementById("title-display").innerText =
-          document.getElementById("title").value;
-        document.getElementById("phone-display").innerText =
-          document.getElementById("phone").value;
-        document.getElementById("email-display").innerText =
-          document.getElementById("email").value;
-        document.getElementById("address-display").innerText =
-          document.getElementById("address").value;
-      }
-      function toggleInput(inputId) {
-        var input = document.getElementById(inputId);
-        if (input.style.display === "none") {
-          input.style.display = "inline-block";
-        } else {
-          input.style.display = "none";
-        }
-      }
-    </script>
   </body>
 </html>

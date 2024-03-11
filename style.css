@@ -1,0 +1,171 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+label {
+}
+.input-field {
+  border: none;
+  background-color: #f5f5f5;
+}
+.container {
+  padding: 20px;
+  height: 1080px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.header-text {
+  font-size: larger;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.sign-btn {
+  padding: 20px 16px;
+  border: none;
+  background-color: #146ebe;
+  color: white;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: 600;
+  border-radius: 15px;
+}
+.sign-btn:hover {
+  background-color: #146ebe;
+}
+.swap-form {
+  display: flex;
+  padding: 8px;
+  background-color: white;
+  margin-bottom: 12px;
+}
+.active {
+  background-color: #146ebe;
+  color: white;
+}
+.detail {
+  padding: 8px 30px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.link {
+  padding: 8px 30px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.form-container {
+  display: flex;
+}
+.form {
+  width: 40%;
+  background-color: white;
+  border-radius: 10px;
+}
+.form-group {
+  border-radius: 10px;
+}
+.form-group label {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: gray;
+  margin: 10px 0;
+  margin-left: 5px;
+  padding: 10px;
+}
+.form-group input {
+  width: 100%;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 0 10px;
+  margin-bottom: 10px;
+}
+.card-container {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  height: 500px;
+  background-color: white;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-icon {
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.icon {
+  cursor: pointer;
+  background: #e4e2e2;
+  border-radius: 10px;
+  padding: 7px;
+  width: 15%;
+  text-align: center;
+}
+.icon-social {
+  font-size: 40px;
+}
+.selected {
+  color: blue;
+}
+.flex-label {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: green;
+}
+.icon-card {
+  width: 20px;
+  height: 20px;
+  padding: 7px;
+  background-color: #146ebe;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+a {
+  text-decoration: none;
+}
+.icon-selected {
+  color: #146ebe;
+  border: #146ebe 2px solid;
+}
